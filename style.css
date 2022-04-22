@@ -1,0 +1,164 @@
+* {
+    font-family: gothamLight, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: ease 0.4s;
+    color: white;
+}
+
+@font-face {
+    font-family: gothamMed;
+    src: url(https://a.storyblok.com/f/112136/x/5e402b0b67/gotham-medium.otf);
+}
+
+@font-face {
+    font-family: gothamLight;
+    src: url(https://a.storyblok.com/f/112136/x/1e7232d46e/gotham-book.otf);
+}
+
+@font-face {
+    font-family: gothamBold;
+    src: url(https://a.storyblok.com/f/112136/x/361f778928/gotham-bold.otf);
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.thankYouImage {
+    max-height: 10rem;
+    width: auto;
+    margin: 1rem;
+}
+
+.thankYouMessage {
+    font-size: 1.3rem;
+}
+
+.thanksContainer {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+.titleOne {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.titleTwo {
+    font-weight: lighter;
+}
+
+.headerImage {
+    max-height: 9rem;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.helpText {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-family: gothamLight, sans-serif;
+    font-weight: lighter;
+    opacity: 1;
+    font-size: 0.9rem;
+}
+
+.ratingContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.ratingImage {
+    max-width: 1.5rem;
+    height: auto;
+}
+
+.ratingImage:hover {
+    animation: wiggle 0.8s forwards;
+}
+
+.ratingSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.ratingSection:hover {
+    filter: none;
+
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    }
+    75% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.ratingNumber {
+    font-size: 0.8rem;
+}
+
+.submit {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 450px) {
+    .headerImage {
+        display: none;
+    }
+
+    .ratingImage {
+        max-width: 1.5rem;
+    }
+}
